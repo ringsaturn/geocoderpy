@@ -11,20 +11,17 @@ lazy_static! {
 #[derive(Debug)]
 pub struct Info {
     #[pyo3(get)]
-    pub iso_a2: String,
+    pub code: String,
     #[pyo3(get)]
-    pub name_sort: String,
-    #[pyo3(get)]
-    pub left_handed: bool,
+    pub name: String,
 }
 
 #[pyfunction]
 fn get_info(_py: Python, lng: f64, lat: f64) -> PyResult<Info> {
     let res = CODER.lookup(Point::new(lng, lat)).unwrap();
     return Ok(Info {
-        iso_a2: res.iso_a2.to_owned(),
-        name_sort: res.name_sort.to_owned(),
-        left_handed: res.left_handed.to_owned(),
+        code: res.code.to_owned(),
+        name: res.name.to_owned(),
     });
 }
 

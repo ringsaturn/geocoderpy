@@ -47,7 +47,7 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 [[package]]
 name = "country-geocoder"
 version = "0.1.0"
-source = "git+https://github.com/ringsaturn/country-geocoder#71ad68d691a65094f962a3991242602fa99c08fd"
+source = "git+https://github.com/ringsaturn/country-geocoder#9ce6c9590c5ef2647f9464da4deecb9703799c06"
 dependencies = [
  "geo",
  "geojson",
